@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.capitalize{
+    text-transform: uppercase;
+}
+
+.section-header{
+    background-color: #fff;
+    width: 35%;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
