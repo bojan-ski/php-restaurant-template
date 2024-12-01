@@ -1,3 +1,4 @@
+/* GENERAL */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -19,4 +20,33 @@ a{
     text-align: center;
     text-transform: uppercase;
     font-style: italic;
+}
+
+
+/* RESERVATIONS */
+.reservations{
+    padding: 0px 0 100px 0;
+}
+
+.reservations .section-header{
+    margin-bottom: 75px;
+}
+
+.reservations .reservation-option h2{
+    font-size: 58px;
+    margin-bottom: 40px;
+}
+
+.reservations .reservation-option p{
+    margin-bottom: 75px;
+}
+
+.reservations .reservation-option .phone-num{
+    background-color: #fff;
+    color: #000;
+}
+
+.reservations .reservation-option .phone-num:hover{
+    background-color: #444;
+    color: #fff;
 }
