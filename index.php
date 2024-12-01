@@ -19,46 +19,11 @@
 
     <main>
 
-        <!-- reservations -->
-        <section class="location">
-            <div class="section-header rounded-5">
-                <h2 class="mb-0">
-                    Gde se nalazimo
-                </h2>
-            </div>
-
-            <!-- location data -->
-            <div class="container">
-                
-            </div>
-
-            <!-- location map -->
-        </section>
+        <!-- location -->
+        <?php include 'inc/homePage/location.php' ?>
 
         <!-- reservations -->
-        <section class="reservations border-bottom mb-3">
-            <div class="container">
-                <div class="section-header rounded-5">
-                    <h2 class="mb-0">
-                        Reservacije
-                    </h2>
-                </div>
-
-                <div class="reservation-option text-center">
-                    <h2 class="capitalize fw-bold text-white">
-                        REZERVIŠI STO
-                    </h2>
-
-                    <p class="text-white">
-                        Za rezervaciju stola pozovite nas.
-                    </p>
-
-                    <a href="tel:+3811220512122" class="phone-num fst-italic fw-bold px-5 py-3 rounded-5">
-                        Kontaktiraj Nas
-                    </a>
-                </div>
-            </div>
-        </section>
+        <?php include 'inc/homePage/reservations.php' ?>
     </main>
 
-    <?php include 'inc/footer.php' ?>
+<?php include 'inc/footer.php' ?>

@@ -1,6 +1,6 @@
 <footer class="footer" id="footer">
     <div class="container">
-        <div class="section-header rounded-5">
+        <div class="section-header rounded-5 mb-5">
             <h2>
                 Social
             </h2>
@@ -9,7 +9,7 @@
         <div class="row mb-4">
             <!-- row item 1 -->
             <div class="col-6">
-                <p class="capitalize text-white">
+                <p class="capitalize text-white fw-bold">
                     podaci o firmi
                 </p>
 

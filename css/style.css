@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+.container{
+    max-width: 900px;
+}
+
 a{
     text-decoration: none;
 }
@@ -15,7 +19,7 @@ a{
 
 .section-header{
     background-color: #fff;
-    width: 35%;
+    width: 450px;
     margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
