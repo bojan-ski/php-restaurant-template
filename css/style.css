@@ -1,56 +1,72 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /* GENERAL */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    max-width: 900px;
+.container {
+  max-width: 1000px;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.capitalize{
-    text-transform: uppercase;
+.capitalize {
+  text-transform: uppercase;
 }
 
-.section-header{
-    background-color: #fff;
-    width: 450px;
-    margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
-    font-style: italic;
+.section-header {
+  background-color: #fff;
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
 }
 
+/* DESCRIPTION */
+.description h2 {
+  font-family: "Lobster", sans-serif;
+  font-size: 48px;
+}
+
+.description h6 {
+  font-size: 24px;
+}
+
+.description p {
+  font-size: 18px;
+}
 
 /* RESERVATIONS */
-.reservations{
-    padding: 0px 0 100px 0;
+.reservations {
+  padding: 0px 0 100px 0;
 }
 
-.reservations .section-header{
-    margin-bottom: 75px;
+.reservations .section-header {
+  margin-bottom: 75px;
 }
 
-.reservations .reservation-option h2{
-    font-size: 58px;
-    margin-bottom: 40px;
+.reservations .reservation-option h2 {
+  font-size: 58px;
+  margin-bottom: 40px;
 }
 
-.reservations .reservation-option p{
-    margin-bottom: 75px;
+.reservations .reservation-option p {
+  margin-bottom: 75px;
 }
 
-.reservations .reservation-option .phone-num{
-    background-color: #fff;
-    color: #000;
+.reservations .reservation-option .phone-num {
+  background-color: #fff;
+  color: #000;
 }
 
-.reservations .reservation-option .phone-num:hover{
-    background-color: #444;
-    color: #fff;
+.reservations .reservation-option .phone-num:hover {
+  background-color: #444;
+  color: #fff;
 }

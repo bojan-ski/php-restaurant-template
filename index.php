@@ -19,6 +19,9 @@
 
     <main>
 
+        <!-- description -->
+        <?php include 'inc/homePage/description.php' ?>
+
         <!-- location -->
         <?php include 'inc/homePage/location.php' ?>
 
