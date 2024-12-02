@@ -18,6 +18,8 @@
     </header>
 
     <main>
+        <!-- hero -->
+        <?php include 'inc/homePage/hero.php' ?>
 
         <!-- description -->
         <?php include 'inc/homePage/description.php' ?>
