@@ -29,6 +29,88 @@ a {
   font-style: italic;
 }
 
+/* ---------- HEADER ---------- */
+#header {
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  transition: background-color 0.2s ease;
+}
+
+#header.scrolled {
+  background-color: rgb(33, 37, 41);
+  transition: background-color 0.2s ease;
+}
+
+#header .nav-options .nav-option {
+  padding: 5px 100px;
+  color: #999;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  transition: all 0.2s ease-in;
+}
+
+#header .nav-options .nav-option-two {
+  padding: 5px 120px;
+}
+
+#header .nav-options .nav-option:hover {
+  color: #222;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  transition: all 0.2s ease-in;
+}
+
+#header .nav-options .nav-option.active {
+  color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#header .custom-dropdown {
+  position: relative;
+}
+
+#header .selected-option {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#header .flag {
+  height: 30px;
+  width: 45px;
+}
+
+#header .dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#header .custom-dropdown.active .dropdown-options {
+  display: block;
+}
+
+#header .option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#header .option:hover {
+  opacity: 0.5;
+}
+
+/* ---------- MAIN ---------- */
 /* HERO */
 .hero {
   position: relative;
@@ -65,10 +147,13 @@ a {
   margin-bottom: 75px;
 }
 
+.hero .hero-options {
+  min-width: 500px;
+}
+
 .hero .hero-options a {
   font-size: 14px;
   padding: 10px 30px;
-  margin: 0 100px;
   background-color: #222;
   color: #fff;
   border: 1px solid #111;
@@ -121,9 +206,11 @@ a {
 .reservations .reservation-option .phone-num {
   background-color: #fff;
   color: #000;
+  transition: all 0.2s ease-in;
 }
 
 .reservations .reservation-option .phone-num:hover {
   background-color: #444;
   color: #fff;
+  transition: all 0.2s ease-in;
 }

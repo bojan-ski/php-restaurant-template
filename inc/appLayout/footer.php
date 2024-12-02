@@ -1,4 +1,4 @@
-<footer class="footer" id="footer">
+<footer class="footer pb-3" id="footer">
     <div class="container">
         <div class="section-header rounded-5 mb-5">
             <h2>
@@ -59,9 +59,3 @@
         </a>
     </div>
 </footer>
-
-<!-- bootstrap -->
-<script src="js/bootstrap.min.js"></script>
-</body>
-
-</html>

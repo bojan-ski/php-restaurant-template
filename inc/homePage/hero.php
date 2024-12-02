@@ -15,13 +15,17 @@
         </h2>
     </div>
 
-    <div class="hero-options">
-        <a href="menu.php" class="hero-nav-link capitalize fst-italic rounded-5 fw-bold">
-            Meni
-        </a>
+    <div class="hero-options row">
+        <div class="col-12 col-md-6 mb-5 mb-md-0">
+            <a href="menu.php" class="hero-nav-link capitalize fst-italic rounded-5 fw-bold">
+                Meni
+            </a>
+        </div>
 
-        <a href="tel:+3811220512122" class="capitalize fst-italic rounded-5 fw-bold">
-            Poruči ☎
-        </a>
+        <div class="col-12 col-md-6">
+            <a href="tel:+3811220512122" class="capitalize fst-italic rounded-5 fw-bold">
+                Poruči ☎
+            </a>
+        </div>
     </div>
 </section>

@@ -1,34 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- PHP code -->
+<?php include 'inc/htmlStart.php' ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
+<!-- HTML code -->
+<main class="main" id="main">
+    <!-- hero -->
+    <?php include 'inc/homePage/hero.php' ?>
 
-    <title>San Marco Plus</title>
-</head>
+    <!-- description -->
+    <?php include 'inc/homePage/description.php' ?>
 
-<body class="bg-dark">
-    <header>
+    <!-- location -->
+    <?php include 'inc/homePage/location.php' ?>
 
-    </header>
+    <!-- reservations -->
+    <?php include 'inc/homePage/reservations.php' ?>
+</main>
 
-    <main>
-        <!-- hero -->
-        <?php include 'inc/homePage/hero.php' ?>
-
-        <!-- description -->
-        <?php include 'inc/homePage/description.php' ?>
-
-        <!-- location -->
-        <?php include 'inc/homePage/location.php' ?>
-
-        <!-- reservations -->
-        <?php include 'inc/homePage/reservations.php' ?>
-    </main>
-
-<?php include 'inc/footer.php' ?>
+<!-- PHP code -->
+<?php include 'inc/htmlEnd.php' ?>
