@@ -9,8 +9,8 @@
         <!-- item 2 -->
         <div class="nav-options">
             <a
-                href="index.php"
-                class="nav-option nav-option-one fst-italic me-0 me-md-3 me-lg-5 <?= $current_url == '/index.php' ? 'active' : '' ?>">
+                href="/"
+                class="nav-option nav-option-one fst-italic me-0 me-md-3 me-lg-5 <?= $current_url == '/' ? 'active' : '' ?>">
                 Početna
             </a>
             <a
@@ -22,17 +22,52 @@
 
         <!-- item 3 -->
         <div class="custom-dropdown">
-            <div class="selected-option" onclick="toggleDropdown()">
+            <div class="selected-option" onclick={toggleDropdown()}>
                 <img src="/assets/flags/srb_flag.png" alt="srb-flag" class="flag">
             </div>
             <div class="dropdown-options">
-                <div class="option" data-value="srb" onclick="selectOption(this)">
+                <div class="option" data-value="srb" onclick={selectOption(this)}>
                     <img src="/assets/flags/srb_flag.png" alt="srb-flag" class="flag">
                 </div>
-                <div class="option" data-value="eng" onclick="selectOption(this)">
+                <div class="option" data-value="eng" onclick={selectOption(this)}>
                     <img src="/assets/flags/gbr_flag.png" alt="gbr-flag" class="flag">
                 </div>
             </div>
+        </div>
+
+        <!-- item 4 -->
+        <div class="mobile-nav-options">
+
+            <div class="navigation">
+                <input type="checkbox" class="navigation-checkbox" id="nav-toggle">
+
+                <label for="nav-toggle" class="navigation-button">
+                    <span class="navigation-icon">
+                        &nbsp;
+                    </span>
+                </label>
+
+                <div class="navigation-background">
+                    &nbsp;
+                </div>
+
+                <nav class="navigation-nav">
+                    <ul class="navigation-list">
+                        <li class="navigation-item">
+                            <a href="/" class="navigation-link <?= $current_url == '/' ? 'active' : '' ?>">
+                                Početna
+                            </a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="menu.php" class="navigation-link <?= $current_url == '/menu.php' ? 'active' : '' ?>">
+                                Meni
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
         </div>
     </div>
 </header>
