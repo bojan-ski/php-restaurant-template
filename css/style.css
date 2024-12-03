@@ -27,6 +27,51 @@ a {
   text-align: center;
   text-transform: uppercase;
   font-style: italic;
+  animation: zoom 0.5s linear;
+}
+
+/* ANIMATIONS */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(0.1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-0.1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ---------- HEADER ---------- */
@@ -361,10 +406,37 @@ a {
 
 .description h6 {
   font-size: 24px;
+  animation: moveInLeft 0.8s ease;
 }
 
 .description p {
   font-size: 18px;
+  animation: moveInLeft 1s ease;
+}
+
+.description .carousel{
+  animation: moveInRight 1s ease;
+}
+
+/* LOCATION */
+.location p{
+  font-size: 18px;
+}
+
+.location p:first-child {
+  animation: moveInLeft 0.8s ease;
+}
+
+.location p:nth-child(1) {
+  animation: moveInLeft 0.9s ease;
+}
+
+.location p:nth-child(2) {
+  animation: moveInLeft 1s ease;
+}
+
+.location p:last-child {
+  animation: moveInLeft 1.1s ease;
 }
 
 /* RESERVATIONS */
@@ -379,10 +451,12 @@ a {
 .reservations .reservation-option h2 {
   font-size: 58px;
   margin-bottom: 40px;
+  animation: moveInLeft 0.8s ease;
 }
 
 .reservations .reservation-option p {
   margin-bottom: 75px;
+  animation: moveInLeft 0.9s ease;
 }
 
 .reservations .reservation-option .phone-num {
@@ -395,4 +469,38 @@ a {
   background-color: #444;
   color: #fff;
   transition: all 0.2s ease-in;
+}
+
+/* ---------- FOOTER ---------- */
+#footer h3{
+  animation: moveInLeft 0.9s ease;
+}
+
+#footer p:nth-child(1) {
+  animation: moveInLeft 1s ease;
+}
+
+#footer p:nth-child(2) {
+  animation: moveInLeft 1.1s ease;
+}
+
+#footer p:nth-child(3) {
+  animation: moveInLeft 1.2s ease;
+}
+
+#footer p.capitalize{
+  animation: moveInLeft 0.8s ease;
+}
+
+#footer a.email-address{
+  display: inline-block;
+  animation: moveInLeft 1.3s ease;
+}
+
+#footer .application-rights{
+  animation: moveInLeft 1.4s ease;
+}
+
+#footer a img.social-link-logo{
+  animation: zoom 0.5s linear;
 }

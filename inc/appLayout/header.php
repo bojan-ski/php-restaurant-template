@@ -37,7 +37,6 @@
 
         <!-- item 4 -->
         <div class="mobile-nav-options">
-
             <div class="navigation">
                 <input type="checkbox" class="navigation-checkbox" id="nav-toggle">
 
@@ -66,8 +65,6 @@
                     </ul>
                 </nav>
             </div>
-
-
         </div>
     </div>
 </header>

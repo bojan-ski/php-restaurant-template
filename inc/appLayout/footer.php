@@ -30,7 +30,7 @@
                         12000 Požarevac
                     </p>
 
-                    <a href="mailto:kontakt@sanmarcopo.com" class="text-white mb-0">
+                    <a href="mailto:kontakt@sanmarcopo.com" class="email-address text-white mb-0">
                         kontakt@sanmarcopo.com
                     </a>
                 </div>
