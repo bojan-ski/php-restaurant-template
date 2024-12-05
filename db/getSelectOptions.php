@@ -16,6 +16,7 @@ try {
 
     // PITAJ
     // echo "GRESKA";
-} finally {
-    $connectionToDB->close();
-}
+} 
+// finally {
+//     $connectionToDB->close();
+// }
