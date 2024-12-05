@@ -74,7 +74,7 @@ a {
   }
 }
 
-/* ---------- HEADER ---------- */
+/* -------------------- HEADER -------------------- */
 #header {
   background-color: transparent;
   position: fixed;
@@ -337,7 +337,8 @@ a {
   transform: rotate(-135deg);
 }
 
-/* ---------- MAIN ---------- */
+/* -------------------- MAIN -------------------- */
+/* -------------------- HOME PAGE -------------------- */
 /* HERO */
 .hero {
   position: relative;
@@ -441,7 +442,7 @@ a {
 
 /* RESERVATIONS */
 .reservations {
-  padding: 0px 0 100px 0;
+  padding: 0px 0px 100px 0px;
 }
 
 .reservations .section-header {
@@ -471,7 +472,34 @@ a {
   transition: all 0.2s ease-in;
 }
 
-/* ---------- FOOTER ---------- */
+/* -------------------- MENU PAGE -------------------- */
+.menu-page{
+  background-color: #000;
+  padding: 200px 0 30px;
+}
+
+.menu-page h2{
+  font-size: 58px;
+  text-decoration: underline;
+}
+
+/* SELECT OPTION */
+.select-feature select{
+  width: 250px;
+  color: #fff;
+  background-color: #000;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-bottom: 7px;
+  border: none;
+  border-bottom: 1px #333 solid;
+}
+
+.select-feature select:focus{
+  background-color: rgb(31, 31, 31);
+}
+
+/* -------------------- FOOTER -------------------- */
 #footer h3{
   animation: moveInLeft 0.9s ease;
 }

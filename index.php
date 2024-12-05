@@ -3,17 +3,21 @@
 
 <!-- HTML code -->
 <main class="main" id="main">
-    <!-- hero -->
-    <?php include 'inc/homePage/hero.php' ?>
+    <div class="home-page">
 
-    <!-- description -->
-    <?php include 'inc/homePage/description.php' ?>
+        <!-- hero -->
+        <?php include 'inc/homePage/hero.php' ?>
 
-    <!-- location -->
-    <?php include 'inc/homePage/location.php' ?>
+        <!-- description -->
+        <?php include 'inc/homePage/description.php' ?>
 
-    <!-- reservations -->
-    <?php include 'inc/homePage/reservations.php' ?>
+        <!-- location -->
+        <?php include 'inc/homePage/location.php' ?>
+
+        <!-- reservations -->
+        <?php include 'inc/homePage/reservations.php' ?>
+        
+    </div>
 </main>
 
 <!-- PHP code -->

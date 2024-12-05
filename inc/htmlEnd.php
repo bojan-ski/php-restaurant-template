@@ -7,6 +7,7 @@
 <!-- custom js -->
 <script src="js/scrollFunc.js"></script>
 <script src="js/languageFunc.js"></script>
+<script src="js/getSelectedOptionData.js"></script>
 </body>
 
 </html>

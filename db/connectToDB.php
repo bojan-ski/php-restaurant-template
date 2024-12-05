@@ -22,6 +22,7 @@ function loadEnv($filePath){
     }
 }
 
+// PITAJ
 loadEnv(__DIR__ . '/.env');
 
 $hostname = $_ENV['DB_HOSTNAME'];
@@ -29,7 +30,7 @@ $username = $_ENV['DB_USERNAME'];
 $password = $_ENV['DB_PASSWORD'];
 $dbname = $_ENV['DB_NAME'];
 
-$connection_to_db = new mysqli($hostname, $username, $password, $dbname);
+$connectionToDB = new mysqli($hostname, $username, $password, $dbname);
 
 // Check connection
-if ($connection_to_db->connect_error) die("Connection failed: " . $connection_to_db->connect_error);
+if ($connectionToDB->connect_error) die("Connection failed: " . $connectionToDB->connect_error);

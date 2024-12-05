@@ -15,7 +15,7 @@
             </a>
             <a
                 href="menu.php"
-                class="nav-option nav-option-two fst-italic <?= $current_url == '/menu.php' ? 'active' : '' ?>">
+                class="nav-option nav-option-two fst-italic <?= $current_url != '/' ? 'active' : '' ?>">
                 Meni
             </a>
         </div>
@@ -58,7 +58,7 @@
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a href="menu.php" class="navigation-link <?= $current_url == '/menu.php' ? 'active' : '' ?>">
+                            <a href="menu.php" class="navigation-link <?= $current_url != '/' ? 'active' : '' ?>">
                                 Meni
                             </a>
                         </li>
