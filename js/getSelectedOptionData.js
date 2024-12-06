@@ -3,13 +3,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     const resultContainer = document.querySelector('.menu-items-list');
 
     const fetchMenuItems = async (option) => {
+        console.log(option);
+        
         try {
             const response = await fetch('./db/getMenuItems.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ userSelectedOption: option }),
+                body: JSON.stringify({ 
+                    userSelectedOption: option 
+                }),
             });
 
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);

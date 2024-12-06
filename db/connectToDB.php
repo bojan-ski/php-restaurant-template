@@ -2,6 +2,7 @@
 
 function loadEnv($filePath){
     if (!file_exists($filePath)) {
+        // ERROR - REWORK AT END
         throw new Exception("Pojavila se greška, molimo Vas probajte ponovo");
     }
 
@@ -33,4 +34,5 @@ $dbname = $_ENV['DB_NAME'];
 $connectionToDB = new mysqli($hostname, $username, $password, $dbname);
 
 // Check connection
+// ERROR - REWORK AT END
 if ($connectionToDB->connect_error) die("Connection failed: " . $connectionToDB->connect_error);

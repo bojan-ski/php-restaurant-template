@@ -6,17 +6,11 @@ try {
     $getSelectOptionsQuery = "SELECT * FROM select_options";
     $selectOptionsResult = $connectionToDB->query($getSelectOptionsQuery);
 
-    // PITAJ 
+    // ERROR - REWORK AT END
     if (!$selectOptionsResult) {
         throw new Exception("Query failed: " . $connectionToDB->error);
     }
 } catch (Exception $e) {
+    // ERROR - REWORK AT END
     echo (['error' => $e->getMessage()]);
-
-
-    // PITAJ
-    // echo "GRESKA";
 } 
-// finally {
-//     $connectionToDB->close();
-// }

@@ -13,7 +13,7 @@ if(isset($selectOptionsResult) && !empty($selectOptionsResult)){
     }
     
     $matches = array_filter($selectOptionsArray, function ($item) use ($selectedOption) {
-        return $item["select_option_title"] === $selectedOption;
+        return $item["select_option_value"] === $selectedOption;
     });
 }
 
@@ -23,7 +23,7 @@ if (!empty($matches)) {
         $query = "SELECT * FROM `$selectedOption`";
         $response = $connectionToDB->query($query);
 
-        // PITAJ
+        // ERROR - REWORK AT END
         if (!$response) {
             throw new Exception("Query failed: " . $connectionToDB->error);
         }
@@ -34,17 +34,13 @@ if (!empty($matches)) {
         echo json_encode($menuItems);
     } catch (Exception $e) {
         header('Content-Type: application/json');
+
+        // ERROR - REWORK AT END
         echo json_encode(['error' => $e->getMessage()]);
-
-
-        // PITAJ
-        // echo "GRESKA";
     } finally {
         $connectionToDB->close();
     }
 } else {
+    // ERROR - REWORK AT END
     throw new Exception("'$selectedOption' does not exist in the array.");
-
-    // PITAJ
-    // echo "GRESKA";
 }
