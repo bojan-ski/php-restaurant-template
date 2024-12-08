@@ -499,6 +499,15 @@ a {
   background-color: rgb(31, 31, 31);
 }
 
+/* MENU ITEMS */
+.menu-items-list .category .category-title{
+  font-size: 36px;
+}
+
+.menu-items-list .category .menu-item .row .col-12 svg g path{
+  fill: #fff;
+}
+
 /* -------------------- FOOTER -------------------- */
 #footer h3{
   animation: moveInLeft 0.9s ease;
