@@ -358,6 +358,31 @@ a {
   }
 }
 
+/* -------------------- BACK TO TOP FEATURE -------------------- */
+.back-to-top-feature svg {
+  position: fixed;
+  right: 30px;
+  bottom: 250px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.back-to-top-feature.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .back-to-top-feature {
+    display: none;
+  }
+}
+
 /* -------------------- MAIN -------------------- */
 /* -------------------- HOME PAGE -------------------- */
 /* HERO */

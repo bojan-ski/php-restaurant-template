@@ -8,6 +8,7 @@
 <script src="js/scrollFunc.js"></script>
 <script src="js/languageFunc.js"></script>
 <script src="js/getSelectedOptionData.js"></script>
+<script src="js/scrollToTop.js"></script>
 </body>
 
 </html>
