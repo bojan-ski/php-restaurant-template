@@ -11,7 +11,7 @@
 <!-- custom js -->
 <script src="js/scrollFunc.js"></script>
 <script src="js/languageFunc.js"></script>
-<script src="js/getSelectedOptionData.js"></script>
+<script type="module" src="js/getSelectedOptionData.js"></script>
 <script src="js/scrollToTop.js"></script>
 </body>
 
