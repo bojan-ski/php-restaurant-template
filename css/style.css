@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+body{
+  position: relative;
+}
+
 .container {
   max-width: 1000px;
 }
@@ -335,6 +339,23 @@ a {
   .navigation-icon::after {
   top: 0;
   transform: rotate(-135deg);
+}
+
+/* -------------------- CALL FEATURE -------------------- */
+.call-feature a{
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .call-feature {
+    display: none;
+  }
 }
 
 /* -------------------- MAIN -------------------- */

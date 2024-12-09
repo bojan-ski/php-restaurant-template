@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (option == 'sendvič' || option == 'slane_palacinke' || option == 'potaži' || option == 'vafli') menuItemsSimple(option, data, resultContainer)
 
-            if (option == 'pica' || option == 'paste') menuItemsComplex(option, data, resultContainer)
+            if (option == 'pica' || option == 'paste') menuItemsComplex(data, resultContainer)
         } catch (error) {
             console.error('Error:', error);
             resultContainer.innerHTML = '<p class="text-danger">An error occurred while fetching menu items.</p>';
@@ -193,10 +193,7 @@ function menuItemsSimple(option, data, resultContainer) {
     });
 }
 
-function menuItemsComplex(option, data, resultContainer) {
-    console.log(option);
-    console.log(data);
-
+function menuItemsComplex(data, resultContainer) {
     // Get categories
     const groupedMenu = data.reduce((acc, item) => {
         if (!acc[item.category]) {
@@ -316,8 +313,6 @@ function menuItemsComplex(option, data, resultContainer) {
                     const subDivFive = document.createElement('div');
                     subDivFive.className = 'col-12 mt-1 d-flex align-items-center';
                     menuItemData.appendChild(subDivFive);
-
-                    console.log(item.icon_one);
 
                     const divElOne = document.createElement('div');
                     divElOne.className = 'd-flex align-items-center inner-block';
