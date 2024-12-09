@@ -1,5 +1,5 @@
 <!-- PHP code -->
-<?php require './db/getSelectOptions.php'; ?>
+<?php require './models/getSelectOptions.php'; ?>
 
 <!-- HTML code -->
 <section class="select-feature text-center">
@@ -13,9 +13,9 @@
                 <?php endforeach; ?>
             </select>
         <?php else: ?>
-            <h2 class="fw-bold text-white text-decoration-none my-5">
-                Pojavila se greška
-            </h2>
+            <h3 class="fw-bold text-white text-decoration-none my-5">
+                Greška prilikom prikazivanje opcija za meni
+            </h3>
         <?php endif; ?>
     </div>
 </section>

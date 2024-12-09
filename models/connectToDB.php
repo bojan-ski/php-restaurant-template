@@ -1,11 +1,10 @@
 <?php
 
 function loadEnv($filePath){
-    if (!file_exists($filePath)) {
-        // ERROR - REWORK AT END
-        throw new Exception("Pojavila se greška, molimo Vas probajte ponovo");
-    }
+    // redirect user if error
+    if (!file_exists($filePath)) header("Location: error.php");
 
+    // check .env file
     $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
         if (strpos(trim($line), '#') === 0) {
@@ -23,7 +22,6 @@ function loadEnv($filePath){
     }
 }
 
-// PITAJ
 loadEnv(__DIR__ . '/.env');
 
 $hostname = $_ENV['DB_HOSTNAME'];
@@ -31,8 +29,8 @@ $username = $_ENV['DB_USERNAME'];
 $password = $_ENV['DB_PASSWORD'];
 $dbname = $_ENV['DB_NAME'];
 
+// connect to DB
 $connectionToDB = new mysqli($hostname, $username, $password, $dbname);
 
 // Check connection
-// ERROR - REWORK AT END
-if ($connectionToDB->connect_error) die("Connection failed: " . $connectionToDB->connect_error);
+if ($connectionToDB->connect_error) header("Location: error.php");

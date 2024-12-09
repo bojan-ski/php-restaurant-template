@@ -5,7 +5,7 @@ require __DIR__ . '/getSelectOptions.php';
 $data = json_decode(file_get_contents('php://input'), true);
 $selectedOption = $data['userSelectedOption'] ?? 'promo';
 
-// check if user selected option exist in selectable options array (obj)
+// check if User selected option exist in selectable options array (obj)
 if(isset($selectOptionsResult) && !empty($selectOptionsResult)){
     $selectOptionsArray = [];
     while ($row = $selectOptionsResult->fetch_assoc()) {
@@ -18,29 +18,25 @@ if(isset($selectOptionsResult) && !empty($selectOptionsResult)){
 }
 
 if (!empty($matches)) {
-    // run query if user selected option exist in selectable options array (obj)
+    // run query if User selected option exist in selectable options array (obj)
     try {
         $query = "SELECT * FROM `$selectedOption`";
         $response = $connectionToDB->query($query);
 
-        // ERROR - REWORK AT END
         if (!$response) {
-            throw new Exception("Query failed: " . $connectionToDB->error);
+            throw new Exception("Query failed");
         }
 
         $menuItems = $response->fetch_all(MYSQLI_ASSOC);
-
-        header('Content-Type: application/json');
+        
         echo json_encode($menuItems);
     } catch (Exception $e) {
-        header('Content-Type: application/json');
-
-        // ERROR - REWORK AT END
-        echo json_encode(['error' => $e->getMessage()]);
-    } finally {
-        $connectionToDB->close();
+        throw new Exception("Error while fetching menu items");
     }
 } else {
-    // ERROR - REWORK AT END
+    // throw if User selected option does not exist in selectable options array (obj)
     throw new Exception("'$selectedOption' does not exist in the array.");
 }
+
+// close connection
+$connectionToDB->close();

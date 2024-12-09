@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const fetchMenuItems = async (option) => {
         try {
-            const response = await fetch('./db/getMenuItems.php', {
+            const response = await fetch('./models/getMenuItems.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
-            const data = await response.json();
+            const data = await response.json();                       
 
             // reset menu items content
             resultContainer.innerHTML = '<pre>' + '</pre>';
@@ -28,8 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (option == 'pica' || option == 'paste') menuItemsComplex(data, resultContainer)
         } catch (error) {
-            console.error('Error:', error);
-            resultContainer.innerHTML = '<p class="text-danger">An error occurred while fetching menu items.</p>';
+            resultContainer.innerHTML = '<h3 class="text-white text-center text-danger fw-bold mb-5">Greška prilikom stavki iz menija</h3>';
         }
     }
 

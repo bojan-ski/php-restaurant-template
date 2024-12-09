@@ -6,11 +6,15 @@ try {
     $getSelectOptionsQuery = "SELECT * FROM select_options";
     $selectOptionsResult = $connectionToDB->query($getSelectOptionsQuery);
 
-    // ERROR - REWORK AT END
     if (!$selectOptionsResult) {
-        throw new Exception("Query failed: " . $connectionToDB->error);
+        $selectOptionsResult = 0;
+        
+        // close connection
+        $connectionToDB->close();
     }
 } catch (Exception $e) {
-    // ERROR - REWORK AT END
-    echo (['error' => $e->getMessage()]);
-} 
+    $selectOptionsResult = 0;
+
+    // close connection
+    $connectionToDB->close();
+}

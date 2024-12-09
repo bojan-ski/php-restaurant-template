@@ -1,4 +1,8 @@
 <!-- PHP code -->
+<?php include 'inc/backToTopFeature.php' ?>
+
+<?php include 'inc/callFeature.php' ?>
+
 <?php include 'appLayout/footer.php' ?>
 
 <!-- bootstrap js -->

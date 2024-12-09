@@ -19,8 +19,4 @@
 </main>
 
 <!-- PHP code -->
-<?php include 'inc/callFeature.php' ?>
-
-<?php include 'inc/backToTopFeature.php' ?>
-
 <?php include 'inc/htmlEnd.php' ?>
