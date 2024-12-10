@@ -9,10 +9,10 @@
 <script src="js/bootstrap.min.js"></script>
 
 <!-- custom js -->
-<script src="js/scrollFunc.js"></script>
+<script src="js/headerScrollFunc.js"></script>
 <script src="js/languageFunc.js"></script>
+<script src="js/scrollToTopFunc.js"></script>
 <script type="module" src="js/getSelectedOptionData.js"></script>
-<script src="js/scrollToTop.js"></script>
 </body>
 
 </html>

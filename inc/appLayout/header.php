@@ -1,3 +1,10 @@
+<!-- PHP code -->
+<?php
+include './data/sr/srHeader.php';
+include './data/en/enHeader.php';
+?>
+
+<!-- HTML code -->
 <header class="header" id="header">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -10,27 +17,35 @@
         <div class="nav-options">
             <a
                 href="/"
-                class="nav-option nav-option-one fst-italic me-0 me-md-3 me-lg-5 <?= $current_url == '/' ? 'active' : '' ?>">
-                Početna
+                class="nav-option nav-option-one fst-italic me-0 me-md-3 me-lg-5 <?= $currentUrl == '/' ? 'active' : '' ?>">
+                <?php if ($lang == 'sr'): ?>
+                    <?= $srHeaderContent["nav_option_one"] ?>
+                <?php elseif ($lang == 'en'): ?>
+                    <?= $enHeaderContent["nav_option_one"] ?>
+                <?php endif; ?>
             </a>
             <a
                 href="menu.php"
-                class="nav-option nav-option-two fst-italic <?= $current_url != '/' ? 'active' : '' ?>">
-                Meni
+                class="nav-option nav-option-two fst-italic <?= $currentUrl != '/' ? 'active' : '' ?>">
+                <?php if ($lang == 'sr'): ?>
+                    <?= $srHeaderContent["nav_option_two"] ?>
+                <?php elseif ($lang == 'en'): ?>
+                    <?= $enHeaderContent["nav_option_two"] ?>
+                <?php endif; ?>
             </a>
         </div>
 
         <!-- item 3 -->
         <div class="custom-dropdown">
-            <div class="selected-option" onclick={toggleDropdown()}>
-                <img src="/assets/flags/srb_flag.png" alt="srb-flag" class="flag">
+            <div class="selected-option" onclick="toggleDropdown()">
+                <img src="assets/flags/<?= $lang; ?>_flag.png" alt="<?= $lang; ?>-flag" class="flag">
             </div>
             <div class="dropdown-options">
-                <div class="option" data-value="srb" onclick={selectOption(this)}>
-                    <img src="/assets/flags/srb_flag.png" alt="srb-flag" class="flag">
+                <div class="option" data-value="sr" onclick="selectOption(this)">
+                    <img src="assets/flags/sr_flag.png" alt="sr-flag" class="flag">
                 </div>
-                <div class="option" data-value="eng" onclick={selectOption(this)}>
-                    <img src="/assets/flags/gbr_flag.png" alt="gbr-flag" class="flag">
+                <div class="option" data-value="en" onclick="selectOption(this)">
+                    <img src="assets/flags/en_flag.png" alt="en-flag" class="flag">
                 </div>
             </div>
         </div>
@@ -53,13 +68,21 @@
                 <nav class="navigation-nav">
                     <ul class="navigation-list">
                         <li class="navigation-item">
-                            <a href="/" class="navigation-link <?= $current_url == '/' ? 'active' : '' ?>">
-                                Početna
+                            <a href="/" class="navigation-link <?= $currentUrl == '/' ? 'active' : '' ?>">
+                                <?php if ($lang == 'sr'): ?>
+                                    <?= $srHeaderContent["nav_option_one"] ?>
+                                <?php elseif ($lang == 'en'): ?>
+                                    <?= $enHeaderContent["nav_option_one"] ?>
+                                <?php endif; ?>
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a href="menu.php" class="navigation-link <?= $current_url != '/' ? 'active' : '' ?>">
-                                Meni
+                            <a href="menu.php" class="navigation-link <?= $currentUrl != '/' ? 'active' : '' ?>">
+                                <?php if ($lang == 'sr'): ?>
+                                    <?= $srHeaderContent["nav_option_two"] ?>
+                                <?php elseif ($lang == 'en'): ?>
+                                    <?= $enHeaderContent["nav_option_two"] ?>
+                                <?php endif; ?>
                             </a>
                         </li>
                     </ul>

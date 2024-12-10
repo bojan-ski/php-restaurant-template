@@ -1,7 +1,18 @@
+<!-- PHP code -->
+<?php
+include './data/sr/srHomePage.php';
+include './data/en/enHomePage.php';
+?>
+
+<!-- HTML code -->
 <section class="location mb-3">
     <div class="section-header rounded-5 mb-5">
         <h2 class="mb-0">
-            Gde se nalazimo
+            <?php if ($lang == 'sr'): ?>
+                <?= $srLocationContent["page_header"] ?>
+            <?php elseif ($lang == 'en'): ?>
+                <?= $enLocationContent["page_header"] ?>
+            <?php endif; ?>
         </h2>
     </div>
 
@@ -12,20 +23,36 @@
             <!-- row item 1 -->
             <div class="col-12 col-md-6 mb-5 mb-md-3">
                 <p class="text-white mb-0">
-                    Nalazimo se na pristupačnoj lokaciji u samom centru grada pored gradskog Muzeja u Požarevcu
+                    <?php if ($lang == 'sr'): ?>
+                        <?= $srLocationContent["location_info"] ?>
+                    <?php elseif ($lang == 'en'): ?>
+                        <?= $enLocationContent["location_info"] ?>
+                    <?php endif; ?>
                 </p>
             </div>
 
             <!-- row item 2 -->
             <div class="col-12 col-md-6 mb-3">
                 <p class="text-white mb-0 ms-0 ms-md-5">
-                    Milene Pavlović Barili 4,
+                    <?php if ($lang == 'sr'): ?>
+                        <?= $srLocationContent["address"] ?>
+                    <?php elseif ($lang == 'en'): ?>
+                        <?= $enLocationContent["address"] ?>
+                    <?php endif; ?>
                 </p>
                 <p class="text-white mb-3 ms-0 ms-md-5">
-                    Požarevac 12000
+                    <?php if ($lang == 'sr'): ?>
+                        <?= $srLocationContent["city"] ?>
+                    <?php elseif ($lang == 'en'): ?>
+                        <?= $enLocationContent["city"] ?>
+                    <?php endif; ?>
                 </p>
                 <p class="text-white mb-0 ms-0 ms-md-5">
-                    Ponedeljak - Nedelja 07:00 - 00:00
+                    <?php if ($lang == 'sr'): ?>
+                        <?= $srLocationContent["working_hours"] ?>
+                    <?php elseif ($lang == 'en'): ?>
+                        <?= $enLocationContent["working_hours"] ?>
+                    <?php endif; ?>
                 </p>
             </div>
         </div>

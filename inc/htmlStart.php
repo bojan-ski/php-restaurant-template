@@ -1,9 +1,27 @@
 <!-- PHP code -->
-<?php $current_url = $_SERVER['REQUEST_URI']; ?>
+<?php
+// get current url
+function getCurrentUrl(){
+    $uri = explode('?', $_SERVER['REQUEST_URI'], 2)[0];
+    return $uri;
+}
+
+$currentUrl = getCurrentUrl();
+
+// Check if a language is set, else default to Serbian
+session_start();
+
+if (isset($_GET['lang'])) {
+    $selectedLang = $_GET['lang'];
+    $_SESSION['lang'] = $selectedLang;
+}
+
+$lang = $_SESSION['lang'] ?? 'sr';
+?>
 
 <!-- HTML code -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $lang ?>">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +33,7 @@
 
     <!-- title -->
     <title>
-        <?= $current_url == '/index.php' ? 'Početna' : 'Meni'  ?> | San Marco Plus
+        <?= $currentUrl == '/' ? 'Početna' : 'Meni'  ?> | San Marco Plus
     </title>
 </head>
 

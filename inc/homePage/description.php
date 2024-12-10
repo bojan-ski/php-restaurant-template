@@ -1,3 +1,10 @@
+<!-- PHP code -->
+<?php
+include './data/sr/srHomePage.php';
+include './data/en/enHomePage.php';
+?>
+
+<!-- HTML code -->
 <section class="description border-bottom mb-3">
     <div class="container">
         <div class="row text-white">
@@ -5,18 +12,34 @@
             <!-- row item 1 -->
             <div class="col-12 col-md-6 mb-3">
                 <h2 class="mb-5 fst-italic">
-                    Spoj raznovrsnog ukusa i modernog ambijenta
+                    <?php if ($lang == 'sr'): ?>
+                        <?= $srDescriptionContent["headline"] ?>
+                    <?php elseif ($lang == 'en'): ?>
+                        <?= $enDescriptionContent["headline"] ?>
+                    <?php endif; ?>
                 </h2>
 
                 <h6 class="mb-5 lh-base">
-                    Naš cilj je da našim gostima pružimo maksimalno zadovoljstvo i uživanje u hrani i ambijentu. Naša vrata su uvek otvorena kako bi ste doživeli nezaboravno iskustvo i sećanja koja ćete pamtiti sa porodicom kao i sa timom San Marco-a.
+                    <?php if ($lang == 'sr'): ?>
+                        <?= $srDescriptionContent["description"] ?>
+                    <?php elseif ($lang == 'en'): ?>
+                        <?= $enDescriptionContent["description"] ?>
+                    <?php endif; ?>
                 </h6>
 
                 <p class="mb-1 fst-italic">
-                    "Dodajte paradajz i origano da jelo učinite italijanskim"
+                <?php if ($lang == 'sr'): ?>
+                        <?= $srDescriptionContent["quote"] ?>
+                    <?php elseif ($lang == 'en'): ?>
+                        <?= $enDescriptionContent["quote"] ?>
+                    <?php endif; ?>
                 </p>
                 <p class="mb-0 fst-italic">
-                    - Elis Mej Brok
+                <?php if ($lang == 'sr'): ?>
+                        <?= $srDescriptionContent["author"] ?>
+                    <?php elseif ($lang == 'en'): ?>
+                        <?= $enDescriptionContent["author"] ?>
+                    <?php endif; ?>
                 </p>
             </div>
 
