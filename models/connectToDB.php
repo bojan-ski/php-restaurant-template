@@ -22,7 +22,7 @@ function loadEnv($filePath){
     }
 }
 
-loadEnv(__DIR__ . '/.env');
+loadEnv(__DIR__ . '/../.env');
 
 $hostname = $_ENV['DB_HOSTNAME'];
 $username = $_ENV['DB_USERNAME'];

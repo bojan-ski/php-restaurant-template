@@ -2,6 +2,9 @@
 
 require __DIR__ . '/getSelectOptions.php';
 
+session_start();
+$lang = $_SESSION['lang'] ?? 'sr';
+
 $data = json_decode(file_get_contents('php://input'), true);
 $selectedOption = $data['userSelectedOption'] ?? 'promo';
 
@@ -20,7 +23,7 @@ if(isset($selectOptionsResult) && !empty($selectOptionsResult)){
 if (!empty($matches)) {
     // run query if User selected option exist in selectable options array (obj)
     try {
-        $query = "SELECT * FROM `$selectedOption`";
+        $query = "SELECT * FROM `$selectedOption` WHERE data_language='$lang'";
         $response = $connectionToDB->query($query);
 
         if (!$response) {

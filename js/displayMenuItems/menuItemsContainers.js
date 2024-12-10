@@ -58,14 +58,18 @@ function createPriceDiv(price) {
     return priceEl
 }
 
-export function menuItemsCategories(option, data, resultContainer) {
+export function menuItemsCategories(option, data, resultContainer, selectedLanguage) {    
     if (option == 'doručak') {
-        const p = additionalInfo('Doručak se služi do 14h', 'mb-5 text-white');
+        const p = additionalInfo(
+            selectedLanguage == 'sr' ? 'Doručak se služi do 14h' : 'Breakfast is served until 2 PM.',
+            'mb-5 text-white');
         resultContainer.appendChild(p);
     }
 
     if (option == 'slatke_palacinke') {
-        const p = additionalInfo('Palačinke naručite po broju.', 'mb-5 fs-5 text-white');
+        const p = additionalInfo(
+            selectedLanguage == 'sr' ? 'Palačinke naručite po broju.' : 'Order crapes by number.',
+            'mb-5 fs-5 text-white');
         resultContainer.appendChild(p);
     }
 
@@ -90,8 +94,10 @@ export function menuItemsCategories(option, data, resultContainer) {
         categoryContainer.appendChild(categoryTitle);
 
         // Create category sub title
-        if (category == 'doručak') {
-            const categorySubTitle = additionalInfo('Doručak se služi do 14h', 'text-center mb-4');
+        if (category == 'doručak' || category == 'breakfast') {            
+            const categorySubTitle = additionalInfo(
+                selectedLanguage == 'sr' ? 'Doručak se služi do 14h' : 'Breakfast is served until 2 PM.',
+                'text-center mb-4');
             categoryContainer.appendChild(categorySubTitle);
         }
 
@@ -125,12 +131,16 @@ export function menuItemsCategories(option, data, resultContainer) {
     }
 }
 
-export function menuItemsSimple(option, data, resultContainer) {
+export function menuItemsSimple(option, data, resultContainer, selectedLanguage) {
     if (option == 'slane_palacinke') {
-        const paraOne = additionalInfo('Palačinke naručite po broju.', 'mb-3 fs-5 text-white')
+        const paraOne = additionalInfo(
+            selectedLanguage == 'sr' ? 'Palačinke naručite po broju.' : 'Order crapes by number.',
+            'mb-3 fs-5 text-white');
         resultContainer.appendChild(paraOne);
 
-        const paraTwo = additionalInfo('POHOVANJE PALAČINKI 90 RSD', 'mb-3 fs-5 text-white text-uppercase')
+        const paraTwo = additionalInfo(
+            selectedLanguage == 'sr' ? 'POHOVANJE PALAČINKI 90 RSD' : 'DEEP FRYING CRAPES 90 RSD',
+            'mb-3 fs-5 text-white text-uppercase')
         resultContainer.appendChild(paraTwo);
     }
 

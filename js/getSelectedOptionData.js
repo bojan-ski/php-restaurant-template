@@ -3,15 +3,22 @@ import { menuItemsCategories, menuItemsComplex, menuItemsSimple } from './displa
 
 document.addEventListener('DOMContentLoaded', async () => {
     const selectElement = document.querySelector('.select-option');
-    const resultContainer = document.querySelector('.menu-items-list');    
+    const resultContainer = document.querySelector('.menu-items-list');     
+    const selectedLanguage = document.documentElement.getAttribute('lang');    
 
     // Fetch and render menu items based on the selected option
     const handleMenuFetch = async (option) => {
         try {
-            const data = await fetchMenuItems(option);
+            const data = await fetchMenuItems(option);            
 
             // reset menu items content
             resultContainer.innerHTML = '';
+
+            if(data.length == 0 && selectedLanguage == 'sr'){
+                resultContainer.innerHTML = '<h3 class="text-white text-center text-danger fw-bold mb-5">Trenutno nemamo stavki iz menija</h3>';
+            }else if(data.length == 0 && selectedLanguage == 'en'){
+                resultContainer.innerHTML = '<h3 class="text-white text-center text-danger fw-bold mb-5">Currently there are no menu items </h3>';
+            }
 
             // Render menu items based on the selected select option
             const categoryGroups = {
@@ -21,9 +28,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             };
 
             if (categoryGroups.categories.includes(option)) {
-                menuItemsCategories(option, data, resultContainer);
+                menuItemsCategories(option, data, resultContainer, selectedLanguage);
             } else if (categoryGroups.simple.includes(option)) {
-                menuItemsSimple(option, data, resultContainer);
+                menuItemsSimple(option, data, resultContainer, selectedLanguage);
             } else if (categoryGroups.complex.includes(option)) {
                 menuItemsComplex(data, resultContainer);
             }
