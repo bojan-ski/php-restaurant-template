@@ -1,19 +1,15 @@
-<!-- PHP code -->
 <?php
 include './data/sr/srHeader.php';
 include './data/en/enHeader.php';
 ?>
 
-<!-- HTML code -->
 <header class="header" id="header">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <!-- item 1 -->
         <div class="header-logo">
             <img src="assets/san-marco-logo.avif" alt="logo" class="img-fluid" style="height: 120px;">
         </div>
 
-        <!-- item 2 -->
         <div class="nav-options">
             <a
                 href="/"
@@ -35,7 +31,6 @@ include './data/en/enHeader.php';
             </a>
         </div>
 
-        <!-- item 3 -->
         <div class="custom-dropdown">
             <div class="selected-option" onclick="toggleDropdown()">
                 <img src="assets/flags/<?= $lang; ?>_flag.png" alt="<?= $lang; ?>-flag" class="flag">
@@ -50,7 +45,6 @@ include './data/en/enHeader.php';
             </div>
         </div>
 
-        <!-- item 4 -->
         <div class="mobile-nav-options">
             <div class="navigation">
                 <input type="checkbox" class="navigation-checkbox" id="nav-toggle">

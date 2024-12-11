@@ -550,8 +550,9 @@ a {
   fill: #fff;
 }
 
-/* -------------------- ERROR PAGE -------------------- */
-.error-page{
+/* -------------------- ERROR PAGE & 404 PAGE -------------------- */
+.error-page,
+.not-found-page{
   height: 70vh;
 }
 

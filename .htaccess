@@ -1,4 +1,4 @@
-<FilesMatch "^(index|error|menu)\.php$">
+<FilesMatch "^(index|menu|error|not_found)\.php$">
     Require all granted
 </FilesMatch>
 

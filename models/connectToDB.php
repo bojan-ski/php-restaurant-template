@@ -1,7 +1,7 @@
 <?php
 
 function loadEnv($filePath){
-    // redirect user if error
+    // redirect user .env not found
     if (!file_exists($filePath)) header("Location: error.php");
 
     // check .env file
@@ -32,5 +32,5 @@ $dbname = $_ENV['DB_NAME'];
 // connect to DB
 $connectionToDB = new mysqli($hostname, $username, $password, $dbname);
 
-// Check connection
+// Check connection & redirect user if no connection
 if ($connectionToDB->connect_error) header("Location: error.php");
