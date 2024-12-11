@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Fetch and render menu items based on the selected option
     const handleMenuFetch = async (option) => {
         try {
-            const data = await fetchMenuItems(option);            
+            const data = await fetchMenuItems(option);                       
 
             // reset menu items content
             resultContainer.innerHTML = '';
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 menuItemsComplex(data, resultContainer);
             }
         } catch (error) {
-            resultContainer.innerHTML = '<h3 class="text-white text-center text-danger fw-bold mb-5">Greška prilikom stavki iz menija</h3>';
+            resultContainer.innerHTML = '<h3 class="text-white text-center text-danger fw-bold mb-5">Greška prilikom prikazivanja stavki iz menija</h3>';
         }
     };
 

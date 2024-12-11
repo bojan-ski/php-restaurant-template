@@ -1,15 +1,12 @@
-<!-- PHP code -->
 <?php
 include './data/sr/srHomePage.php';
 include './data/en/enHomePage.php';
 ?>
 
-<!-- HTML code -->
 <section class="description border-bottom mb-3">
     <div class="container">
         <div class="row text-white">
 
-            <!-- row item 1 -->
             <div class="col-12 col-md-6 mb-3">
                 <h2 class="mb-5 fst-italic">
                     <?php if ($lang == 'sr'): ?>
@@ -43,7 +40,6 @@ include './data/en/enHomePage.php';
                 </p>
             </div>
 
-            <!-- row item 2 -->
             <div class="col-12 col-md-6 mb-3">
                 <div id="carouselMenuItems" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">

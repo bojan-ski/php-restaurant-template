@@ -1,7 +1,5 @@
-<!-- PHP code -->
 <?php require './models/getSelectOptions.php'; ?>
 
-<!-- HTML code -->
 <section class="select-feature text-center">
     <div class="container">
         <?php if (isset($selectOptionsResult) && !empty($selectOptionsResult)): ?>

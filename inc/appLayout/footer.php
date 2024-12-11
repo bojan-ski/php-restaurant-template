@@ -1,10 +1,8 @@
-<!-- PHP code -->
 <?php
 include './data/sr/srFooter.php';
 include './data/en/enFooter.php';
 ?>
 
-<!-- HTML code -->
 <footer class="footer pb-3" id="footer">
     <div class="container">
         <div class="section-header rounded-5 mb-5">
@@ -18,7 +16,6 @@ include './data/en/enFooter.php';
         </div>
 
         <div class="row mb-4">
-            <!-- row item 1 -->
             <div class="col-6">
                 <p class="text-uppercase text-white fw-bold">
                     <?php if ($lang == 'sr'): ?>
@@ -71,7 +68,6 @@ include './data/en/enFooter.php';
                 </div>
             </div>
 
-            <!-- row item 2 -->
             <div class="col-6 text-end">
                 <img src="assets/san-marco-logo.avif" alt="logo" class="img-fluid">
             </div>
@@ -79,11 +75,11 @@ include './data/en/enFooter.php';
 
         <div class="application-rights mb-3">
             <p class="text-white mb-0">
-            <?php if ($lang == 'sr'): ?>
-                            <?= $srFooterContent["app_rights"] ?>
-                        <?php elseif ($lang == 'en'): ?>
-                            <?= $enFooterContent["app_rights"] ?>
-                        <?php endif; ?>
+                <?php if ($lang == 'sr'): ?>
+                    <?= $srFooterContent["app_rights"] ?>
+                <?php elseif ($lang == 'en'): ?>
+                    <?= $enFooterContent["app_rights"] ?>
+                <?php endif; ?>
             </p>
         </div>
     </div>

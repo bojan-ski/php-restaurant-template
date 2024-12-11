@@ -20,10 +20,6 @@ a {
   text-decoration: none;
 }
 
-.capitalize {
-  text-transform: uppercase;
-}
-
 .section-header {
   background-color: #fff;
   width: 450px;

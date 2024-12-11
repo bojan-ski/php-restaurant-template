@@ -1,7 +1,5 @@
-<!-- PHP code -->
 <?php include 'inc/htmlStart.php' ?>
 
-<!-- HTML code -->
 <main class="main" id="main">
     <div class="error-page border-bottom mb-3 d-flex align-items-center justify-content-center">
 
@@ -18,5 +16,4 @@
     </div>
 </main>
 
-<!-- PHP code -->
 <?php include 'inc/htmlEnd.php' ?>

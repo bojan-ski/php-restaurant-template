@@ -5,7 +5,7 @@ require __DIR__ . '/connectToDB.php';
 $lang = $_SESSION['lang'] ?? 'sr';
 
 try {
-    $getSelectOptionsQuery = "SELECT * FROM select_options WHERE data_language='$lang'";
+    $getSelectOptionsQuery = "SELECT * FROM select_options WHERE data_language='{$lang}'";
     $selectOptionsResult = $connectionToDB->query($getSelectOptionsQuery);
 
     if (!$selectOptionsResult) {

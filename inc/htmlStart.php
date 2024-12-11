@@ -1,4 +1,3 @@
-<!-- PHP code -->
 <?php
 // get current url
 function getCurrentUrl(){
@@ -8,36 +7,33 @@ function getCurrentUrl(){
 
 $currentUrl = getCurrentUrl();
 
-// Check if a language is set, else default to Serbian
+// Check if a language is set & is valid, else default to sr
+require './models/checkSelectedLanguage.php';
+
 session_start();
 
 if (isset($_GET['lang'])) {
     $selectedLang = $_GET['lang'];
-    $_SESSION['lang'] = $selectedLang;
+    $isValidLanguage = checkSelectedLanguage($selectedLang);
+    $_SESSION['lang'] = $isValidLanguage;
 }
 
 $lang = $_SESSION['lang'] ?? 'sr';
 ?>
 
-<!-- HTML code -->
 <!DOCTYPE html>
 <html lang="<?= $lang ?>">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- custom css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- title -->
     <title>
         <?= $currentUrl == '/' ? 'Početna' : 'Meni'  ?> | San Marco Plus
     </title>
 </head>
 
 <body class="bg-dark">
-
-    <!-- PHP code -->
+    
     <?php include 'appLayout/header.php' ?>

@@ -1,10 +1,8 @@
-<!-- PHP code -->
 <?php
 include './data/sr/srHomePage.php';
 include './data/en/enHomePage.php';
 ?>
 
-<!-- HTML code -->
 <section class="reservations border-bottom mb-3">
     <div class="container">
         <div class="section-header rounded-5">

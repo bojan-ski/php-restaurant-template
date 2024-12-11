@@ -1,18 +1,14 @@
-<!-- PHP code -->
 <?php
 include './data/sr/srHomePage.php';
 include './data/en/enHomePage.php';
 ?>
 
-<!-- HTML code -->
 <section class="hero border-bottom text-center mb-3">
-    <!-- Video Background -->
     <video autoplay loop muted playsinline class="video-background">
         <source
             src="https://video.wixstatic.com/video/cd9ce2_d4f14374ea3e4d63b37eb615bc2da650/1080p/mp4/file.mp4" type="video/mp4">
     </video>
 
-    <!-- Overlay Content -->
     <div class="hero-header mb-5">
         <h2 class="header-label-one text-white fst-italic">
             <?php if ($lang == 'sr'): ?>

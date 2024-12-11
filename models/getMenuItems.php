@@ -23,7 +23,7 @@ if(isset($selectOptionsResult) && !empty($selectOptionsResult)){
 if (!empty($matches)) {
     // run query if User selected option exist in selectable options array (obj)
     try {
-        $query = "SELECT * FROM `$selectedOption` WHERE data_language='$lang'";
+        $query = "SELECT * FROM `$selectedOption` WHERE data_language='{$lang}'";
         $response = $connectionToDB->query($query);
 
         if (!$response) {
