@@ -283,10 +283,10 @@ export function menuItemsComplex(data, resultContainer) {
                     subDivFive.appendChild(divElOne);
 
                     let iconSVG;
-                    if (item.icon_one == 'Jaja') iconSVG = icons.jaja
-                    if (item.icon_one == 'Ljuto') iconSVG = icons.ljuto
-                    if (item.icon_one == 'Extra ljuto') iconSVG = icons.ekstra_ljuto
-                    if (item.icon_one == 'Riba') iconSVG = icons.riba
+                    if (item.icon_one == 'Jaja' || item.icon_one == 'Eggs') iconSVG = icons.jaja
+                    if (item.icon_one == 'Ljuto' || item.icon_one == 'Hot') iconSVG = icons.ljuto
+                    if (item.icon_one == 'Extra ljuto' || item.icon_one == 'Extra hot') iconSVG = icons.ekstra_ljuto
+                    if (item.icon_one == 'Riba' || item.icon_one == 'Fish') iconSVG = icons.riba
 
                     divElOne.innerHTML = iconSVG;
 
@@ -298,10 +298,10 @@ export function menuItemsComplex(data, resultContainer) {
                         subDivFive.appendChild(divElTwo);
 
                         let iconSVG;
-                        if (item.icon_two == 'Jaja') iconSVG = icons.jaja
-                        if (item.icon_two == 'Ljuto') iconSVG = icons.ljuto
-                        if (item.icon_two == 'Extra ljuto') iconSVG = icons.ekstra_ljuto
-                        if (item.icon_two == 'Riba') iconSVG = icons.riba
+                        if (item.icon_two == 'Jaja' || item.icon_two == 'Eggs') iconSVG = icons.jaja
+                        if (item.icon_two == 'Ljuto' || item.icon_two == 'Hot') iconSVG = icons.ljuto
+                        if (item.icon_two == 'Extra ljuto' || item.icon_two == 'Extra hot') iconSVG = icons.ekstra_ljuto
+                        if (item.icon_two == 'Riba' || item.icon_two == 'Fish') iconSVG = icons.riba
 
                         divElTwo.innerHTML = iconSVG;
 
