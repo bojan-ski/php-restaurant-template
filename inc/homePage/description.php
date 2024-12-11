@@ -16,7 +16,7 @@ include './data/en/enHomePage.php';
                     <?php endif; ?>
                 </h2>
 
-                <h6 class="mb-5 lh-base">
+                <h6 class="mb-5 lh-base animate">
                     <?php if ($lang == 'sr'): ?>
                         <?= $srDescriptionContent["description"] ?>
                     <?php elseif ($lang == 'en'): ?>
@@ -24,15 +24,15 @@ include './data/en/enHomePage.php';
                     <?php endif; ?>
                 </h6>
 
-                <p class="mb-1 fst-italic">
-                <?php if ($lang == 'sr'): ?>
+                <p class="mb-1 fst-italic animate">
+                    <?php if ($lang == 'sr'): ?>
                         <?= $srDescriptionContent["quote"] ?>
                     <?php elseif ($lang == 'en'): ?>
                         <?= $enDescriptionContent["quote"] ?>
                     <?php endif; ?>
                 </p>
-                <p class="mb-0 fst-italic">
-                <?php if ($lang == 'sr'): ?>
+                <p class="mb-0 fst-italic animate">
+                    <?php if ($lang == 'sr'): ?>
                         <?= $srDescriptionContent["author"] ?>
                     <?php elseif ($lang == 'en'): ?>
                         <?= $enDescriptionContent["author"] ?>
@@ -40,7 +40,7 @@ include './data/en/enHomePage.php';
                 </p>
             </div>
 
-            <div class="col-12 col-md-6 mb-3">
+            <div class="col-12 col-md-6 mb-3 carousel-div animate">
                 <div id="carouselMenuItems" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">

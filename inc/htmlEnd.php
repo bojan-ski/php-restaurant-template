@@ -6,6 +6,7 @@ include 'appLayout/footer.php';
 
 <script src="js/bootstrap.min.js"></script>
 
+<script src="/js/animateElInView.js"></script>
 <script src="js/headerScrollFunc.js"></script>
 <script src="js/languageFunc.js"></script>
 <script src="js/scrollToTopFunc.js"></script>

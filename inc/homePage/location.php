@@ -4,7 +4,7 @@ include './data/en/enHomePage.php';
 ?>
 
 <section class="location mb-3">
-    <div class="section-header rounded-5 mb-5">
+    <div class="section-header animate rounded-5 mb-5">
         <h2 class="mb-0">
             <?php if ($lang == 'sr'): ?>
                 <?= $srLocationContent["page_header"] ?>
@@ -19,7 +19,7 @@ include './data/en/enHomePage.php';
         <div class="row mb-4">
 
             <div class="col-12 col-md-6 mb-5 mb-md-3">
-                <p class="text-white mb-0">
+                <p class="text-white mb-0 animate">
                     <?php if ($lang == 'sr'): ?>
                         <?= $srLocationContent["location_info"] ?>
                     <?php elseif ($lang == 'en'): ?>
@@ -29,21 +29,21 @@ include './data/en/enHomePage.php';
             </div>
 
             <div class="col-12 col-md-6 mb-3">
-                <p class="text-white mb-0 ms-0 ms-md-5">
+                <p class="text-white mb-0 ms-0 ms-md-5 animate">
                     <?php if ($lang == 'sr'): ?>
                         <?= $srLocationContent["address"] ?>
                     <?php elseif ($lang == 'en'): ?>
                         <?= $enLocationContent["address"] ?>
                     <?php endif; ?>
                 </p>
-                <p class="text-white mb-3 ms-0 ms-md-5">
+                <p class="text-white mb-3 ms-0 ms-md-5 animate">
                     <?php if ($lang == 'sr'): ?>
                         <?= $srLocationContent["city"] ?>
                     <?php elseif ($lang == 'en'): ?>
                         <?= $enLocationContent["city"] ?>
                     <?php endif; ?>
                 </p>
-                <p class="text-white mb-0 ms-0 ms-md-5">
+                <p class="text-white mb-0 ms-0 ms-md-5 animate">
                     <?php if ($lang == 'sr'): ?>
                         <?= $srLocationContent["working_hours"] ?>
                     <?php elseif ($lang == 'en'): ?>
